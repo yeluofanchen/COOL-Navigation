@@ -1,0 +1,140 @@
+/* css reset */
+* {
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  /* list-style: none; */
+  text-decoration: none;
+  /* a 继承样式 */
+  color: inherit;
+}
+img {
+  /* 图片最大宽度, 不要大过自己的容器 */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* style */
+body {
+  /* border: 1px solid red; */
+  background: #eee;
+}
+.globalHeader {
+  margin: 20px;
+}
+.searchForm {
+  display: flex;
+  justify-content: space-between;
+}
+.searchForm > input {
+  width: 100%;
+  margin-right: 10px;
+  height: 40px;
+  padding-left: 5px;
+  /* border: none; */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.searchForm > button {
+  white-space: nowrap;
+  padding: 0px 28px;
+  border-radius: 5px;
+  border: none;
+  /* border: 1px solid #ddd; */
+  background: #0282b9;
+  color: white;
+  font-size: 18px;
+}
+
+/* .globalMain {
+} */
+.webSiteList {
+  /* border: 1px solid red; */
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* border-radius: 5px; */
+}
+.webSiteList > li {
+  /* border: 1px solid green; */
+  /* margin-bottom: 10px; */
+}
+.webSiteList .webSite {
+  /* border: 1px solid red; */
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: white;
+  margin-left: 10 px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 20px 0;
+  margin-bottom: 10px;
+}
+.webSiteList .webSite > .logo {
+  /* border: 1px solid red; */
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 64px;
+}
+.webSiteList .webSite > .link {
+  /* border: 1px solid blue; */
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.webSiteList .addButton {
+  border: 1px solid #ddd;
+  background: white;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 0;
+  /* margin-top: 10px; */
+  border-radius: 5px;
+}
+
+.webSiteList .addButton .iconWrapper {
+  /* border: 1px solid blue; */
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.webSiteList .addButton .iconWrapper .icon {
+  /* border: 1px solid red; */
+  width: 56px;
+  height: 56px;
+  margin-top: 20px;
+}
+
+.webSiteList .addButton .text {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* .test {
+  border: 1px solid red;
+} */
