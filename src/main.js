@@ -37,8 +37,6 @@ const render = () => {
   // 第一次进入函数时, remove 也执行了, 通过 DOM 操作了 HTML , 不过 hashMapArr 的数据还在 JS 内存中, 所以立即就渲染了出来
   $webSiteList.find("li:not(.lastLi").remove();
   hashMapArr.forEach((node, index) => {
-    console.log(index);
-
     const $li = $(`<li>
     <div class="webSite">
       <div class="logo">${node.logo}</div>
@@ -90,3 +88,13 @@ window.onbeforeunload = () => {
 
   localStorage.setItem("hashArr", string);
 };
+
+$(document).on("keypress", (e) => {
+  // const key = e.key, 可以简写, 当变量名和属性名是一样的时候;
+  const { key } = e;
+  for (let i = 0; i < hashMapArr.length; i++) {
+    if (hashMapArr[i].logo.toLowerCase() === key) {
+      window.open(hashMapArr[i].url);
+    }
+  }
+});
