@@ -85,6 +85,7 @@ body {
   border: 1px solid #ddd;
   padding: 20px 0;
   margin-bottom: 10px;
+  position: relative;
 }
 .webSiteList .webSite > .logo {
   /* border: 1px solid red; */
@@ -94,11 +95,18 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 64px;
+  text-transform: uppercase;
 }
 .webSiteList .webSite > .link {
   /* border: 1px solid blue; */
   font-size: 14px;
   margin-top: 4px;
+}
+
+.webSiteList .webSite > .close {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .webSiteList .addButton {
