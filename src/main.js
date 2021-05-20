@@ -7,22 +7,33 @@ const $lastLi = $webSiteList.find("li.lastLi");
 const x = localStorage.getItem("hashArr");
 const xObject = JSON.parse(x);
 
-let hashMapArr = xObject;
-
-if (hashMapArr.length < 2) {
-  hashMapArr = [
-    {
-      logo: "A",
-      url: "https://www.bilibili.com/",
-      link: "acfun.com",
-    },
-    {
-      logo: "B",
-      url: "https://www.bilibili.com/",
-      link: "bilibili.com",
-    },
-  ];
-}
+let hashMapArr = xObject || [
+  {
+    logo: "A",
+    url: "https://www.bilibili.com/",
+    link: "acfun.com",
+  },
+  {
+    logo: "B",
+    url: "https://www.bilibili.com/",
+    link: "bilibili.com",
+  },
+];
+// 如果用户将所有的网址的删除了, ...是否要设置一个button, class="reset",
+// if (hashMapArr.length < 2) {
+//   hashMapArr = [
+//     {
+//       logo: "A",
+//       url: "https://www.bilibili.com/",
+//       link: "acfun.com",
+//     },
+//     {
+//       logo: "B",
+//       url: "https://www.bilibili.com/",
+//       link: "bilibili.com",
+//     },
+//   ];
+// }
 
 const simplifyUrl = (url) => {
   return url

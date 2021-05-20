@@ -113,19 +113,30 @@ var $lastLi = $webSiteList.find("li.lastLi");
 var x = localStorage.getItem("hashArr");
 var xObject = JSON.parse(x);
 
-var hashMapArr = xObject;
-
-if (hashMapArr.length < 2) {
-  hashMapArr = [{
-    logo: "A",
-    url: "https://www.bilibili.com/",
-    link: "acfun.com"
-  }, {
-    logo: "B",
-    url: "https://www.bilibili.com/",
-    link: "bilibili.com"
-  }];
-}
+var hashMapArr = xObject || [{
+  logo: "A",
+  url: "https://www.bilibili.com/",
+  link: "acfun.com"
+}, {
+  logo: "B",
+  url: "https://www.bilibili.com/",
+  link: "bilibili.com"
+}];
+// 如果用户将所有的网址的删除了, ...是否要设置一个button, class="reset",
+// if (hashMapArr.length < 2) {
+//   hashMapArr = [
+//     {
+//       logo: "A",
+//       url: "https://www.bilibili.com/",
+//       link: "acfun.com",
+//     },
+//     {
+//       logo: "B",
+//       url: "https://www.bilibili.com/",
+//       link: "bilibili.com",
+//     },
+//   ];
+// }
 
 var simplifyUrl = function simplifyUrl(url) {
   return url.replace("https://", "").replace("http://", "").replace("www.", "").replace(".com", "").replace(/\/.*/, ""); // 删除 / 开头的内容
@@ -188,4 +199,4 @@ $(document).on("keypress", function (e) {
   }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.3b9762b6.map
+//# sourceMappingURL=main.dc5bc1dd.map
