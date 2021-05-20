@@ -1,4 +1,4 @@
-console.log("---jQuery 玩耍时间---");
+console.log("----jQuery 玩耍时间----");
 
 const $webSiteList = $(".webSiteList");
 const $lastLi = $webSiteList.find("li.lastLi");
@@ -53,7 +53,7 @@ const render = () => {
     });
 
     $li.on("click", ".close", function (e) {
-      console.log("我点击了这里");
+      // console.log("我点击了这里");
       e.stopPropagation(); // 阻止冒泡
       hashMapArr.splice(index, 1);
       render();
@@ -69,7 +69,7 @@ $(".addButton").on("click", () => {
   if (url.indexOf("http") !== 0) {
     url = "https://" + url;
   }
-  console.log(url);
+  // console.log(url);
 
   hashMapArr.push({
     logo: simplifyUrl(url)[0],
