@@ -33,11 +33,36 @@ body {
 }
 .globalHeader {
   margin: 20px;
+  /* margin-top: 100px; */
+  /* margin-bottom: 50px; */
+}
+@media (min-width: 500px) {
+  .globalHeader {
+    margin: 100px 0;
+  }
 }
 .searchForm {
   display: flex;
   justify-content: space-between;
 }
+
+/* PC 适配 */
+/* if(screen > 500px){} */
+/* 小于 500 的, 我不管 */
+@media (min-width: 500px) {
+  .searchForm {
+    max-width: 400px;
+    /* searchForm 居中 */
+    /* 小白写法,  因为这里的 margin: 0 会覆盖掉别人的上下 margin*/
+    margin: 0 auto;
+    /* 更加专业的写法,  */
+    margin-left: auto;
+    margin-left: auto;
+    justify-content: center;
+    /* background: red; */
+  }
+}
+
 .searchForm > input {
   width: 100%;
   margin-right: 10px;
@@ -56,21 +81,35 @@ body {
   background: #0282b9;
   color: white;
   font-size: 18px;
+  /* max-width: 100px; */
 }
 
-/* .globalMain {
-} */
+.globalMain {
+  max-width: 900px;
+  /* margin: 0 auto; */
+  margin-left: auto;
+  margin-right: auto;
+}
 .webSiteList {
   /* border: 1px solid red; */
   margin: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   /* border-radius: 5px; */
+}
+@media (min-width: 500px) {
+  .webSiteList {
+    margin-left: 0;
+    margin-right: 0;
+    margin-right: -25px;
+    /* 不要直接写 margin: 0; 因为不要改你不想改的地方 */
+    /* margin: 0; */
+  }
 }
 .webSiteList > li {
   /* border: 1px solid green; */
   /* margin-bottom: 10px; */
+  margin-right: 25px;
 }
 .webSiteList .webSite {
   /* border: 1px solid red; */
@@ -86,6 +125,8 @@ body {
   padding: 20px 0;
   margin-bottom: 10px;
   position: relative;
+  /* 出现鼠标手型 */
+  cursor: pointer;
 }
 .webSiteList .webSite > .logo {
   /* border: 1px solid red; */
@@ -105,8 +146,16 @@ body {
 
 .webSiteList .webSite > .close {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 10px;
+  top: 5px;
+  display: none;
+  /* width: 20px; */
+  /* height: 50px; */
+  cursor: default;
+}
+/* 隐藏 删除按钮 */
+.webSiteList .webSite:hover > .close {
+  display: block;
 }
 
 .webSiteList .addButton {
