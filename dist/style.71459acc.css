@@ -1,0 +1,205 @@
+/* css reset */
+* {
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  /* list-style: none; */
+  text-decoration: none;
+  /* a 继承样式 */
+  color: inherit;
+}
+img {
+  /* 图片最大宽度, 不要大过自己的容器 */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* style */
+body {
+  /* border: 1px solid red; */
+  background: #eee;
+}
+.globalHeader {
+  margin: 20px;
+  /* margin-top: 100px; */
+  /* margin-bottom: 50px; */
+}
+@media (min-width: 500px) {
+  .globalHeader {
+    margin: 100px 0;
+  }
+}
+.searchForm {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* PC 适配 */
+/* if(screen > 500px){} */
+/* 小于 500 的, 我不管 */
+@media (min-width: 500px) {
+  .searchForm {
+    max-width: 400px;
+    /* searchForm 居中 */
+    /* 小白写法,  因为这里的 margin: 0 会覆盖掉别人的上下 margin*/
+    margin: 0 auto;
+    /* 更加专业的写法,  */
+    margin-left: auto;
+    margin-left: auto;
+    justify-content: center;
+    /* background: red; */
+  }
+}
+
+.searchForm > input {
+  width: 100%;
+  margin-right: 10px;
+  height: 40px;
+  padding-left: 5px;
+  /* border: none; */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.searchForm > button {
+  white-space: nowrap;
+  padding: 0px 28px;
+  border-radius: 5px;
+  border: none;
+  /* border: 1px solid #ddd; */
+  background: #0282b9;
+  color: white;
+  font-size: 18px;
+  /* max-width: 100px; */
+}
+
+.globalMain {
+  max-width: 900px;
+  /* margin: 0 auto; */
+  margin-left: auto;
+  margin-right: auto;
+}
+.webSiteList {
+  /* border: 1px solid red; */
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* border-radius: 5px; */
+}
+@media (min-width: 500px) {
+  .webSiteList {
+    margin-left: 0;
+    margin-right: 0;
+    margin-right: -25px;
+    /* 在 PC 时, 覆盖上面的 jc:sb */
+    justify-content: flex-start;
+    /* 不要直接写 margin: 0; 因为不要改你不想改的地方 */
+    /* margin: 0; */
+  }
+}
+.webSiteList > li {
+  /* border: 1px solid green; */
+  /* margin-bottom: 10px; */
+}
+@media (min-width: 500px) {
+  .webSiteList > li {
+    margin-right: 25px;
+  }
+}
+
+.webSiteList .webSite {
+  /* border: 1px solid red; */
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: white;
+  margin-left: 10 px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 20px 0;
+  margin-bottom: 10px;
+  position: relative;
+  /* 出现鼠标手型 */
+  cursor: pointer;
+}
+.webSiteList .webSite > .logo {
+  /* border: 1px solid red; */
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 64px;
+  text-transform: uppercase;
+}
+.webSiteList .webSite > .link {
+  /* border: 1px solid blue; */
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.webSiteList .webSite > .close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  display: none;
+  /* width: 20px; */
+  /* height: 50px; */
+  cursor: default;
+}
+/* 隐藏 删除按钮 */
+.webSiteList .webSite:hover > .close {
+  display: block;
+}
+
+.webSiteList .addButton {
+  border: 1px solid #ddd;
+  background: white;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 0;
+  /* margin-top: 10px; */
+  border-radius: 5px;
+}
+
+.webSiteList .addButton .iconWrapper {
+  /* border: 1px solid blue; */
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.webSiteList .addButton .iconWrapper .icon {
+  /* border: 1px solid red; */
+  width: 56px;
+  height: 56px;
+  margin-top: 20px;
+}
+
+.webSiteList .addButton .text {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* .test {
+  border: 1px solid red;
+} */
